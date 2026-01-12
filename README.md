@@ -1,7 +1,7 @@
 
 ---
 
-## 📖 About the Project
+## About the Project
 
 This project simulates a real restaurant website where business owners can:
 - Update menu items
@@ -14,7 +14,7 @@ The goal is to demonstrate practical frontend skills and real-world problem solv
 
 ---
 
-## 🔮 Planned Features
+## Planned Features
 
 - Admin authentication
 - Admin dashboard for menu management
@@ -24,15 +24,4 @@ The goal is to demonstrate practical frontend skills and real-world problem solv
 
 ---
 
-## 👨‍💻 Author
 
-**Andrew Kimani**  
-Front-End Developer  
-Portfolio: https://andrew-kimani7.web.app  
-GitHub: https://github.com/Drey766
-
----
-
-## 📄 License
-
-This project is for portfolio and educational purposes.
