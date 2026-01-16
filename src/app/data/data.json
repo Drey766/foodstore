@@ -1,0 +1,174 @@
+{
+  "categories": [
+    "Starters",
+    "Main Dishes",
+    "Burgers",
+    "Pizza",
+    "Drinks",
+    "Desserts"
+  ],
+  "items": [
+    {
+      "id": "1",
+      "name": "Garlic Bread",
+      "category": "Starters",
+      "description": "Toasted bread topped with garlic butter and fresh herbs.",
+      "price": 4.99,
+      "isPopular": true,
+      "image": "https://images.unsplash.com/photo-1604908177522-050df1f26f3c"
+    },
+    {
+      "id": "2",
+      "name": "French Fries",
+      "category": "Starters",
+      "description": "Crispy golden fries served with house dipping sauce.",
+      "price": 3.99,
+      "isPopular": true,
+      "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5"
+    },
+    {
+      "id": "3",
+      "name": "Chicken Wings",
+      "category": "Starters",
+      "description": "Spicy grilled chicken wings served with ranch dip.",
+      "price": 7.99,
+      "isPopular": false,
+      "image": "https://images.unsplash.com/photo-1606756790138-261d2b21cd75"
+    },
+    {
+      "id": "4",
+      "name": "Grilled Chicken Shawarma",
+      "category": "Main Dishes",
+      "description": "Marinated chicken grilled to perfection, served with fresh salad and garlic sauce.",
+      "price": 12.99,
+      "isPopular": true,
+      "image": "https://images.unsplash.com/photo-1625943553852-781c6dd46faa"
+    },
+    {
+      "id": "5",
+      "name": "Beef Steak",
+      "category": "Main Dishes",
+      "description": "Juicy beef steak cooked to your preference with seasonal vegetables.",
+      "price": 18.99,
+      "isPopular": true,
+      "image": "https://images.unsplash.com/photo-1600891964092-4316c288032e"
+    },
+    {
+      "id": "6",
+      "name": "Fish Curry",
+      "category": "Main Dishes",
+      "description": "Fresh fish simmered in a rich and flavorful curry sauce.",
+      "price": 14.99,
+      "isPopular": false,
+      "image": "https://images.unsplash.com/photo-1625944230945-d3f4a1c5b56c"
+    },
+    {
+      "id": "7",
+      "name": "Classic Beef Burger",
+      "category": "Burgers",
+      "description": "Grilled beef patty with lettuce, tomato, cheese, and house sauce.",
+      "price": 9.99,
+      "isPopular": true,
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+    },
+    {
+      "id": "8",
+      "name": "Chicken Burger",
+      "category": "Burgers",
+      "description": "Crispy chicken fillet with fresh lettuce and creamy mayo.",
+      "price": 8.99,
+      "isPopular": false,
+      "image": "https://images.unsplash.com/photo-1606755962773-d324e0a13086"
+    },
+    {
+      "id": "9",
+      "name": "Veggie Burger",
+      "category": "Burgers",
+      "description": "Plant-based patty with grilled vegetables and vegan sauce.",
+      "price": 8.49,
+      "isPopular": false,
+      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b"
+    },
+    {
+      "id": "10",
+      "name": "Margherita Pizza",
+      "category": "Pizza",
+      "description": "Classic pizza with tomato sauce, mozzarella, and fresh basil.",
+      "price": 11.99,
+      "isPopular": true,
+      "image": "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca"
+    },
+    {
+      "id": "11",
+      "name": "Pepperoni Pizza",
+      "category": "Pizza",
+      "description": "Loaded with pepperoni slices and melted cheese.",
+      "price": 13.99,
+      "isPopular": true,
+      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e"
+    },
+    {
+      "id": "12",
+      "name": "BBQ Chicken Pizza",
+      "category": "Pizza",
+      "description": "Grilled chicken, BBQ sauce, onions, and mozzarella.",
+      "price": 14.49,
+      "isPopular": false,
+      "image": "https://images.unsplash.com/photo-1594007654729-407eedc4be1f"
+    },
+    {
+      "id": "13",
+      "name": "Coca-Cola",
+      "category": "Drinks",
+      "description": "Chilled classic Coca-Cola.",
+      "price": 1.99,
+      "isPopular": true,
+      "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97"
+    },
+    {
+      "id": "14",
+      "name": "Fresh Orange Juice",
+      "category": "Drinks",
+      "description": "Freshly squeezed oranges served cold.",
+      "price": 3.49,
+      "isPopular": false,
+      "image": "https://images.unsplash.com/photo-1571689936045-3a3b6e0f1a3c"
+    },
+    {
+      "id": "15",
+      "name": "Iced Coffee",
+      "category": "Drinks",
+      "description": "Cold brewed coffee with milk and ice.",
+      "price": 3.99,
+      "isPopular": false,
+      "image": "https://images.unsplash.com/photo-1590080877777-9e97c5cfcaa7"
+    },
+    {
+      "id": "16",
+      "name": "Chocolate Cake",
+      "category": "Desserts",
+      "description": "Rich and moist chocolate cake topped with ganache.",
+      "price": 5.99,
+      "isPopular": true,
+      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c"
+    },
+    {
+      "id": "17",
+      "name": "Cheesecake",
+      "category": "Desserts",
+      "description": "Creamy cheesecake with a buttery biscuit base.",
+      "price": 6.49,
+      "isPopular": false,
+      "image": "https://images.unsplash.com/photo-1567171466295-4afa63d45416"
+    },
+    {
+      "id": "18",
+      "name": "Ice Cream Sundae",
+      "category": "Desserts",
+      "description": "Vanilla ice cream topped with chocolate sauce and nuts.",
+      "price": 4.99,
+      "isPopular": false,
+      "image": "https://images.unsplash.com/photo-1505253216365-5f37a7b4d6c5"
+    }
+  ]
+}

@@ -36,3 +36,9 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.header__links {
+    border: 1px solid gold;
+    padding: 5px;
+    border-radius: 100%;
+}

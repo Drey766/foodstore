@@ -1,4 +1,8 @@
+'use client'
+
+import { ShoppingBasket } from '@mui/icons-material'
 import styles from './header.module.css'
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -14,7 +18,7 @@ export default function Header() {
                     <li className={styles.header__li}>Contacts</li>
                 </ul>
                 <div className={styles.header__buttons}>
-                    <button>Cart</button>
+                    <Link href='#' className={styles.header__links}><ShoppingBasket /> </Link>
                     <button>Reserve a table</button>
                 </div>
             </div>

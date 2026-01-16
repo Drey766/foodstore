@@ -1,10 +1,12 @@
 'use client'
 
 import './FirstDiv.css'
+import Image from 'next/image'
+import pic1 from '@/../public/images/pexels-filipe-coelho-32247889-13640503_1_-removebg-preview.png'
 
 export default function FirstDiv() {
   return (
-    <div className='firstDiv'>
+    <section className='firstDiv'>
         <div className="firstDiv__cont">
             <div className="firstDiv__text">
                 <h1 className="firstDiv__title">We serve the taste you like.</h1>
@@ -13,6 +15,9 @@ export default function FirstDiv() {
                     <button className='firstDiv__exploreButton'>Explore Food</button>
                     <button className='firstDiv__serchButtons'>Search</button>
                 </div>
+            </div>
+            <div className="firstDiv__imageCont">
+                <Image src={pic1} alt='First Pic' width={4000} height={6016} className='firstDiv__pic' />
             </div>
             <div className="firstDiv__foodTypesCont">
                 <div className="firstDiv__foodType">
@@ -24,6 +29,6 @@ export default function FirstDiv() {
                 <div className="firstDiv__foodType"><span className="firstDiv__foodTypeSpan">Snacks</span></div>
             </div>
         </div>
-    </div>
+    </section>
   )
 }
