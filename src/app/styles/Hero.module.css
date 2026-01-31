@@ -1,0 +1,376 @@
+.hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(135deg, #FFF9F0 0%, #FFFFFF 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.heroLeft {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.emoji {
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+.heroText {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin-bottom: 40px;
+  line-height: 1.8;
+  max-width: 90%;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(255, 165, 0, 0.3);
+}
+
+.primaryBtn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+
+.secondaryBtn {
+  background: var(--white);
+  color: var(--text-dark);
+  padding: 16px 36px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid var(--border-color);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.secondaryBtn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.heroRight {
+  position: relative;
+  animation: fadeInRight 0.8s ease-out;
+}
+
+.foodImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foodImage {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  animation: float 6s ease-in-out infinite;
+}
+
+.plateCircle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFF5E6 0%, #FFFFFF 100%);
+  border: 3px solid #F5F5F5;
+}
+
+.foodPlaceholder {
+  font-size: 12rem;
+  z-index: 2;
+}
+
+.floatingDecor1,
+.floatingDecor2 {
+  position: absolute;
+  font-size: 3rem;
+  animation: float 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+.floatingDecor1 {
+  top: 10%;
+  left: 5%;
+  animation-delay: -1s;
+}
+
+.floatingDecor2 {
+  top: 15%;
+  right: 10%;
+  animation-delay: -2s;
+}
+
+.quickActions {
+  position: absolute;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quickAction {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  animation: slideInRight 0.6s ease-out backwards;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border-radius: 30px;
+  padding: 0 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.quickAction:nth-child(1) { animation-delay: 0.2s; }
+.quickAction:nth-child(2) { animation-delay: 0.3s; }
+.quickAction:nth-child(3) { animation-delay: 0.4s; }
+.quickAction:nth-child(4) { animation-delay: 0.5s; }
+
+.actionIcon {
+  width: 50px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.quickAction:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-md);
+}
+
+.quickAction span:last-child {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.decorElements {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.decorCircle1,
+.decorCircle2,
+.decorCircle3 {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.decorCircle1 {
+  width: 300px;
+  height: 300px;
+  background: var(--primary-color);
+  top: -100px;
+  right: -50px;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.decorCircle2 {
+  width: 200px;
+  height: 200px;
+  background: var(--secondary-color);
+  bottom: 50px;
+  left: -50px;
+  animation: pulse 6s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+.decorCircle3 {
+  width: 150px;
+  height: 150px;
+  background: var(--primary-color);
+  bottom: 200px;
+  right: 100px;
+  animation: pulse 7s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 968px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .heroText {
+    max-width: 100%;
+  }
+
+  .quickActions {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    transform: none;
+  }
+
+  .foodImage {
+    width: 350px;
+    height: 350px;
+  }
+
+  .foodPlaceholder {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 0 40px;
+  }
+
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+
+  .heroText {
+    font-size: 0.95rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .foodImage {
+    width: 280px;
+    height: 280px;
+  }
+
+  .foodPlaceholder {
+    font-size: 6rem;
+  }
+
+  .actionIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .quickAction span:last-child {
+    font-size: 0.75rem;
+  }
+}

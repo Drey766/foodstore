@@ -21,12 +21,11 @@
   display: flex;
   min-height: 100vh;
   width: 100%;
+  max-width: 800px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: #FFF8EE; /* or #FFF6EA */
-  color: #000
-;
+  background-color: var(--foreground);
   padding: 120px 60px;
 }
 

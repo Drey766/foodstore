@@ -1,28 +1,59 @@
-'use client'
+'use client';
 
-import { ShoppingBasket } from '@mui/icons-material'
-import styles from './header.module.css'
-import Link from 'next/link'
+import React, { useState } from 'react';
+import { useCart } from '../context/CartContext';
+import styles from '../styles/Header.module.css';
+import { ShoppingBasket } from '@mui/icons-material';
 
-export default function Header() {
+const Header: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const { totalItems } = useCart();
+
+  const toggleMobileMenu = (): void => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
-    <div className={styles.header}>
-        <div className={styles.header__container}>
-            <div className={styles.header__logo}>Looogo</div>
-            <div className={styles.header__clickables}>
-                <ul className={styles.header__items}>
-                    <li className={styles.header__li}>About us</li>
-                    <li className={styles.header__li}>Menu</li>
-                    <li className={styles.header__li}>Reviews</li>
-                    <li className={styles.header__li}>Blog</li>
-                    <li className={styles.header__li}>Contacts</li>
-                </ul>
-                <div className={styles.header__buttons}>
-                    <Link href='#' className={styles.header__links}><ShoppingBasket /> </Link>
-                    <button>Reserve a table</button>
-                </div>
-            </div>
+    <header className={styles.header}>
+      <div className={styles.headerContainer}>
+        <div className={styles.headerContent}>
+          <div className={styles.logo}>
+            <span className={styles.logoIcon}>🍴</span>
+            <span className={styles.logoText}>Bites</span>
+          </div>
+
+          <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.navOpen : ''}`}>
+            <a href="#home" className={styles.navLink}>Home</a>
+            <a href="#about" className={styles.navLink}>About Us</a>
+            <a href="#menu" className={styles.navLink}>Menu</a>
+            <a href="#blog" className={styles.navLink}>Blog</a>
+            <a href="#contact" className={styles.navLink}>Contact</a>
+          </nav>
+
+          <div className={styles.headerActions}>
+            <button className={`${styles.iconButton} ${styles.cartButton}`} aria-label="Cart">
+              <ShoppingBasket />
+              {totalItems > 0 && (
+                <span className={styles.cartBadge}>{totalItems}</span>
+              )}
+            </button>
+
+            <button className={styles.reserveBtn}>Reserve Now</button>
+
+            <button 
+              className={styles.mobileMenuBtn}
+              onClick={toggleMobileMenu}
+              aria-label="Toggle menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </div>
-    </div>
-  )
-}
+      </div>
+    </header>
+  );
+};
+
+export default Header;

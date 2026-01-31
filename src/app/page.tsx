@@ -1,25 +1,31 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import FirstDiv from "./components/home/FirstDiv";
-import Second from "./components/home/Second";
-import Third from "./components/home/Third";
-import Menu from "./components/home/Menu";
-import Fifth from "./components/home/Fifth";
-import Chef from "./components/home/Chef";
-import Review from "./components/home/Review";
+'use client';
+
+import Header from './components/Header';
+import Hero from './components/Hero';
+import PopularDishes from './components/PopularDishes';
+import ServiceSection from './components/ServiceSection';
+import Menu from './components/Menu';
+import Reservation from './components/Reservation';
+import Testimonials from './components/Testimonials';
+import Chefs from './components/Chefs';
+import MobileApp from './components/MobileApp';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <FirstDiv />
-        <Second />
-        <Third />
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <PopularDishes />
+        <ServiceSection />
         <Menu />
-        <Fifth />
-        <Review />
-        <Chef />
+        <Reservation />
+        <Testimonials />
+        <Chefs />
+        <MobileApp />
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }

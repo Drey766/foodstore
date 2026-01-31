@@ -1,0 +1,179 @@
+.reservation {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #FFF5E6 0%, #FFFFFF 100%);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.left {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.description {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.reserveBtn {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(255, 165, 0, 0.3);
+}
+
+.reserveBtn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+
+.right {
+  position: relative;
+  animation: fadeInRight 0.8s ease-out;
+}
+
+.foodImageWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foodCircle {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+  border: 8px solid #6B3410;
+}
+
+.foodEmoji {
+  font-size: 12rem;
+  animation: rotate 3s ease-in-out infinite;
+}
+
+.steam {
+  position: absolute;
+  top: -30px;
+  font-size: 3rem;
+  animation: steamFloat 2s ease-in-out infinite;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes rotate {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes steamFloat {
+  0%, 100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 968px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .foodCircle {
+    width: 350px;
+    height: 350px;
+  }
+
+  .foodEmoji {
+    font-size: 10rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .reservation {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .foodCircle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .foodEmoji {
+    font-size: 8rem;
+  }
+
+  .steam {
+    font-size: 2rem;
+  }
+}
