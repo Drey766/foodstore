@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import styles from '../styles/Header.module.css';
 import { ShoppingBasket } from '@mui/icons-material';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -25,18 +26,18 @@ const Header: React.FC = () => {
           <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.navOpen : ''}`}>
             <a href="#home" className={styles.navLink}>Home</a>
             <a href="#about" className={styles.navLink}>About Us</a>
-            <a href="#menu" className={styles.navLink}>Menu</a>
+            <Link href="/menu" className={styles.navLink}>Menu</Link>
             <a href="#blog" className={styles.navLink}>Blog</a>
             <a href="#contact" className={styles.navLink}>Contact</a>
           </nav>
 
           <div className={styles.headerActions}>
-            <button className={`${styles.iconButton} ${styles.cartButton}`} aria-label="Cart">
+            <Link href={'/cart'} className={`${styles.iconButton} ${styles.cartButton}`} aria-label="Cart">
               <ShoppingBasket />
               {totalItems > 0 && (
                 <span className={styles.cartBadge}>{totalItems}</span>
               )}
-            </button>
+            </Link>
 
             <button className={styles.reserveBtn}>Reserve Now</button>
 

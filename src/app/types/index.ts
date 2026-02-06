@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface MenuItem {
   id: number;
   name: string;
@@ -26,7 +28,7 @@ export interface Chef {
   id: number;
   name: string;
   role: string;
-  image: string;
+  image: StaticImageData;
 }
 
 export interface Testimonial {

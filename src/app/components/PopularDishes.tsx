@@ -5,6 +5,7 @@ import { useCart } from '../context/CartContext';
 import { MenuItem } from '../types';
 import styles from '../styles/PopularDishes.module.css';
 import DishCard from './DishCard';
+import data from '@/app/data/data.json'
 
 const popularDishes: MenuItem[] = [
   {
@@ -41,6 +42,8 @@ const popularDishes: MenuItem[] = [
   },
 ];
 
+const menuData : MenuItem[] = data.items
+
 const PopularDishes: React.FC = () => {
   const { addToCart } = useCart();
 
@@ -68,7 +71,7 @@ const PopularDishes: React.FC = () => {
         </div>
 
         <div className={styles.dishesGrid}>
-          {popularDishes.map((dish, index) => (
+          {menuData.map((dish, index) => (
             <DishCard key={index} description={dish.description} image={dish.image} name={dish.name} rating={dish.rating} price={dish.price} food={dish} id={dish.id} />
           ))}
         </div>

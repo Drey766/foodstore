@@ -10,6 +10,7 @@ import Testimonials from './components/Testimonials';
 import Chefs from './components/Chefs';
 import MobileApp from './components/MobileApp';
 import Footer from './components/Footer';
+import CarouselComp from './components/Carousel';
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Testimonials />
         <Chefs />
         <MobileApp />
+        <CarouselComp />
       </main>
       <Footer />
     </>
