@@ -1,0 +1,758 @@
+.reservationPage {
+  min-height: 100vh;
+  background: var(--bg-white);
+}
+
+/* Hero Section */
+.heroSection {
+  background: linear-gradient(135deg, #FFF9F0 0%, #FFE8CC 100%);
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Progress Steps */
+.progressSteps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.progressStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.5;
+  transition: var(--transition);
+}
+
+.progressStep.active {
+  opacity: 1;
+}
+
+.progressStep.completed .stepNumber {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.stepNumber {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--border-color);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.progressStep.active .stepNumber {
+  background: var(--primary-color);
+  color: var(--white);
+  box-shadow: 0 0 0 4px rgba(255, 165, 0, 0.2);
+}
+
+.stepLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.progressLine {
+  width: 80px;
+  height: 2px;
+  background: var(--border-color);
+  margin: 0 20px;
+}
+
+/* Main Content */
+.mainContent {
+  padding-bottom: 80px;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+/* Booking Section */
+.bookingSection {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 50px;
+  box-shadow: var(--shadow-md);
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.stepContent {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.stepTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.stepSubtitle {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin-bottom: 40px;
+}
+
+.backBtn {
+  background: transparent;
+  color: var(--primary-color);
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.backBtn:hover {
+  color: var(--primary-hover);
+  transform: translateX(-5px);
+}
+
+/* Calendar Grid */
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.dateCard {
+  background: var(--white);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  animation: fadeInUp 0.5s ease-out backwards;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dateCard:hover:not(.booked) {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.dateCard.selected {
+  border-color: var(--primary-color);
+  background: rgba(255, 165, 0, 0.05);
+}
+
+.dateCard.booked {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--bg-light);
+}
+
+.dateDay {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+
+.dateNumber {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.dateMonth {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+
+.statusBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-top: 8px;
+  background: var(--secondary-color);
+  color: var(--white);
+}
+
+.statusBadge.limited {
+  background: #FFA500;
+}
+
+.statusBadge.available {
+  background: #4CAF50;
+}
+
+/* Time Slots */
+.timeSlotsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.timeSlot {
+  background: var(--white);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  animation: fadeInUp 0.5s ease-out backwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeSlot:hover:not(.unavailable) {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.timeSlot.selected {
+  border-color: var(--primary-color);
+  background: rgba(255, 165, 0, 0.05);
+}
+
+.timeSlot.unavailable {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--bg-light);
+}
+
+.timeIcon {
+  font-size: 1.75rem;
+}
+
+.timeLabel {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.unavailableLabel {
+  font-size: 0.75rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.noSlots {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+/* Details Form */
+.detailsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.input,
+.select,
+.textarea {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 2px solid var(--border-color);
+  font-size: 1rem;
+  color: var(--text-dark);
+  transition: var(--transition);
+  background: var(--white);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.submitBtn {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(255, 165, 0, 0.3);
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+
+/* Info Section */
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: fadeInRight 0.8s ease-out;
+}
+
+.infoCard {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.infoTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.infoIcon {
+  font-size: 1.5rem;
+}
+
+.mapPlaceholder {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #FFF5E6 0%, #FFE8CC 100%);
+  border-radius: 12px;
+}
+
+.mapIcon {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+}
+
+.address {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.directionsBtn {
+  margin-top: 16px;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.directionsBtn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.policyList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.policyList li {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.helpText {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contactButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactBtn {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.contactBtn:hover {
+  background: rgba(255, 165, 0, 0.1);
+  transform: translateX(5px);
+}
+
+/* Success Section */
+.successSection {
+  padding: 60px 0 100px;
+}
+
+.successCard {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 60px 50px;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.successIcon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 32px;
+  animation: scaleIn 0.5s ease-out;
+}
+
+.successTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.successText {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.confirmationDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+  padding: 32px;
+  background: var(--bg-light);
+  border-radius: 12px;
+}
+
+.confirmationItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.confirmationIcon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.confirmationLabel {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.confirmationValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.confirmationNote {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 32px;
+}
+
+.successButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.successBtn {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(255, 165, 0, 0.3);
+  display: inline-block;
+}
+
+.successBtn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+
+.successBtnSecondary {
+  background: var(--white);
+  color: var(--text-dark);
+  padding: 16px 36px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid var(--border-color);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.successBtnSecondary:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 80px 0 40px;
+  }
+  .heroTitle {
+    font-size: 3rem;
+  }
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+  .progressSteps {
+    padding: 40px 0 30px;
+  }
+  .stepLabel {
+    font-size: 0.8rem;
+  }
+  .progressLine {
+    width: 40px;
+    margin: 0 10px;
+  }
+  .bookingSection {
+    padding: 32px 24px;
+  }
+  .stepTitle {
+    font-size: 2rem;
+  }
+  .calendarGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
+  .timeSlotsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+  .successCard {
+    padding: 40px 24px;
+  }
+  .successTitle {
+    font-size: 2rem;
+  }
+  .confirmationDetails {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  .progressSteps {
+    flex-wrap: wrap;
+  }
+  .stepNumber {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .bookingSection {
+    padding: 24px 20px;
+  }
+  .stepTitle {
+    font-size: 1.75rem;
+  }
+  .calendarGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .timeSlotsGrid {
+    grid-template-columns: 1fr;
+  }
+  .infoCard {
+    padding: 24px;
+  }
+  .successIcon {
+    width: 80px;
+    height: 80px;
+    font-size: 3rem;
+  }
+  .successTitle {
+    font-size: 1.75rem;
+  }
+  .successText {
+    font-size: 1rem;
+  }
+  .confirmationIcon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+  .successButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .successBtn,
+  .successBtnSecondary {
+    width: 100%;
+  }
+}

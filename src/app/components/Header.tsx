@@ -24,11 +24,11 @@ const Header: React.FC = () => {
           </div>
 
           <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.navOpen : ''}`}>
-            <a href="#home" className={styles.navLink}>Home</a>
-            <a href="#about" className={styles.navLink}>About Us</a>
+            <Link href="/" className={styles.navLink}>Home</Link>
+            <Link href="/about" className={styles.navLink}>About Us</Link>
             <Link href="/menu" className={styles.navLink}>Menu</Link>
-            <a href="#blog" className={styles.navLink}>Blog</a>
-            <a href="#contact" className={styles.navLink}>Contact</a>
+            <Link href="/reviews" className={styles.navLink}>Reviews</Link>
+            <Link href="/contact" className={styles.navLink}>Contact</Link>
           </nav>
 
           <div className={styles.headerActions}>
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
               )}
             </Link>
 
-            <button className={styles.reserveBtn}>Reserve Now</button>
+            <Link href='/reservation' className={styles.reserveBtn}>Reserve Now</Link>
 
             <button 
               className={styles.mobileMenuBtn}

@@ -1,0 +1,630 @@
+.contactPage {
+  min-height: 100vh;
+  background: var(--bg-white);
+}
+
+/* Hero Section */
+.heroSection {
+  background: linear-gradient(135deg, #FFF9F0 0%, #FFE8CC 100%);
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Info Section */
+.infoSection {
+  padding: 60px 0;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.infoCard {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.infoCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.infoIcon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.infoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.infoDetails p {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Main Section */
+.mainSection {
+  padding: 40px 0 80px;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 60px;
+}
+
+/* Form Section */
+.formSection {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 50px;
+  box-shadow: var(--shadow-md);
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.sectionSubtitle {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.input,
+.select,
+.textarea {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 2px solid var(--border-color);
+  font-size: 1rem;
+  color: var(--text-dark);
+  transition: var(--transition);
+  background: var(--white);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.submitBtn {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(255, 165, 0, 0.3);
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+
+/* Success Message */
+.successMessage {
+  text-align: center;
+  padding: 60px 40px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.successIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  animation: scaleIn 0.5s ease-out;
+}
+
+.successMessage h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.successMessage p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+/* Details Section */
+.detailsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: fadeInRight 0.8s ease-out;
+}
+
+.detailCard {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.detailCard:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.detailTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.detailIcon {
+  font-size: 1.75rem;
+}
+
+.hoursList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hoursItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hoursItem:last-child {
+  border-bottom: none;
+}
+
+.day {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.hours {
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+/* Map Placeholder */
+.mapPlaceholder {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #FFF5E6 0%, #FFE8CC 100%);
+  border-radius: 12px;
+}
+
+.mapIcon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+
+.mapText {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.directionsBtn {
+  margin-top: 20px;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.directionsBtn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Social Links */
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-light);
+  border-radius: 12px;
+  transition: var(--transition);
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.socialLink:hover {
+  background: rgba(255, 165, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.socialIcon {
+  font-size: 1.5rem;
+}
+
+/* FAQ Section */
+.faqSection {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.faqCard {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 32px;
+  text-align: left;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.faqCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.faqQuestion {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.faqAnswer {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #FFF5E6 0%, #FFE8CC 100%);
+  border-radius: var(--border-radius);
+  margin-bottom: 80px;
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.ctaText {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 40px;
+  animation: fadeInUp 0.6s ease-out 0.1s backwards;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.6s ease-out 0.2s backwards;
+}
+
+.ctaBtn {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 18px 44px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(255, 165, 0, 0.3);
+  display: inline-block;
+}
+
+.ctaBtn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+
+.ctaBtnSecondary {
+  background: var(--white);
+  color: var(--text-dark);
+  padding: 18px 44px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: 2px solid var(--border-color);
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.ctaBtnSecondary:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 80px 0 40px;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .formSection {
+    padding: 32px 24px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .detailCard {
+    padding: 24px;
+  }
+
+  .ctaSection {
+    padding: 60px 20px;
+  }
+
+  .ctaTitle {
+    font-size: 2.25rem;
+  }
+
+  .ctaText {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .infoCard {
+    padding: 30px 20px;
+  }
+
+  .infoIcon {
+    font-size: 3rem;
+  }
+
+  .formSection {
+    padding: 24px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .successIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .successMessage h3 {
+    font-size: 1.5rem;
+  }
+
+  .faqQuestion {
+    font-size: 1.1rem;
+  }
+
+  .faqAnswer {
+    font-size: 0.95rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.75rem;
+  }
+
+  .ctaText {
+    font-size: 1rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ctaBtn,
+  .ctaBtnSecondary {
+    width: 100%;
+    text-align: center;
+  }
+}
