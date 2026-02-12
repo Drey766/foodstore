@@ -33,12 +33,10 @@ const ServiceSection: React.FC = () => {
           <div className={styles.right}>
             <h2 className={styles.title}>
               We Are More Than<br />
-              Multiple Service
+              Just A Restaurant
             </h2>
             <p className={styles.description}>
-              This is a type of restaurant which typically serves food and drinks, in addition 
-              to light refreshments such as baked goods or snacks. The term comes from the 
-              French word meaning food.
+              We’re passionate about creating memorable dining experiences. From carefully sourced ingredients to warm, attentive service, everything we do is centered around quality and consistency.
             </p>
 
             <div className={styles.servicesGrid}>

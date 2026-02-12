@@ -25,7 +25,6 @@ export default function Home() {
         <Testimonials />
         <Chefs />
         <MobileApp />
-        <CarouselComp />
       </main>
       <Footer />
     </>

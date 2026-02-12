@@ -15,8 +15,7 @@ const Reservation: React.FC = () => {
               Your Table
             </h2>
             <p className={styles.description}>
-              Make your reservation now and experience the finest dining. Our chefs prepare 
-              every dish with passion and attention to detail.
+              Skip the wait and enjoy a seamless dining experience. Reserve your table online in just a few clicks.
             </p>
             <button className={styles.reserveBtn}>Reserve Now</button>
           </div>

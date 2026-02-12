@@ -34,6 +34,14 @@
   font-size: 1.75rem;
 }
 
+.navContainer {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
 .nav {
   display: flex;
   gap: 32px;
@@ -187,6 +195,9 @@
   .iconButton {
     width: 36px;
     height: 36px;
+  }
+  .navContainer {
+    width: 20%;
   }
 
   .logoText {

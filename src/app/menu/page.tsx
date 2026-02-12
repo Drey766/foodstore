@@ -8,6 +8,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from '../styles/MenuPage.module.css';
 import menu from '../data/menuItems.json'
+import Image from 'next/image';
 
 const categories = [
   'All',
@@ -139,7 +140,7 @@ const MenuPage: React.FC = () => {
                   style={{animationDelay: `${index * 0.05}s`}}
                 >
                   <div className={styles.cardImage}>
-                    <span className={styles.cardEmoji}>{item.image}</span>
+                    <Image className={styles.cardEmoji} src={item.image} alt={item.name} width={400} height={200} />
                     <div className={styles.cardBadge}>
                       <span className={styles.rating}>⭐ {item.rating}</span>
                     </div>

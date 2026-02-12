@@ -5,7 +5,9 @@
 
 /* Hero Section */
 .heroSection {
-  background: linear-gradient(135deg, #FFF9F0 0%, #FFE8CC 100%);
+  background-image: url('../../../public/images/background/pexels-apgpotr-683039.jpg');
+  background-size: cover;
+  background-attachment: fixed;
   padding: 120px 0 80px;
   text-align: center;
   position: relative;
@@ -47,14 +49,14 @@
 .heroTitle {
   font-size: 4.5rem;
   font-weight: 800;
-  color: var(--text-dark);
+  color: var(--bg-white);
   margin-bottom: 20px;
   animation: fadeInDown 0.8s ease-out;
 }
 
 .heroSubtitle {
   font-size: 1.4rem;
-  color: var(--text-light);
+  color: rgb(233, 220, 220);
   max-width: 700px;
   margin: 0 auto;
   animation: fadeInUp 0.8s ease-out;

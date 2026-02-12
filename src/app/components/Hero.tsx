@@ -12,13 +12,11 @@ const Hero: React.FC = () => {
         <div className={styles.heroContent}>
           <div className={styles.heroLeft}>
             <h1 className={styles.heroTitle}>
-              We Serve The Test<br />
+              We Serve The Taste<br />
               You Love <span className={styles.emoji}>😋</span>
             </h1>
             <p className={styles.heroText}>
-              This is a type of restaurant which typically serves food and drinks, in addition 
-              to light refreshments such as baked goods or snacks. The term comes from the 
-              French word.
+              Enjoy freshly prepared dishes made with quality ingredients and bold flavors. From comforting classics to chef-inspired specialties, every bite is crafted with care.
             </p>
             <div className={styles.heroButtons}>
               <button className={styles.primaryBtn}>Reserve Now</button>

@@ -15,7 +15,7 @@
       "description": "Toasted bread topped with garlic butter and fresh herbs.",
       "price": 4.99,
       "isPopular": true,
-      "image": "https://images.unsplash.com/photo-1604908177522-050df1f26f3c",
+      "image": "/images/dataImages/pexels-pramodtiwari-14841924.jpg",
       "rating": 4.8
     },
     {
@@ -25,7 +25,7 @@
       "description": "Crispy golden fries served with house dipping sauce.",
       "price": 3.99,
       "isPopular": true,
-      "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5",
+      "image": "/images/dataImages/pexels-barfisch-pix-115740(1).jpg",
       "rating": 4.8
     },
     {
@@ -35,7 +35,7 @@
       "description": "Spicy grilled chicken wings served with ranch dip.",
       "price": 7.99,
       "isPopular": false,
-      "image": "https://images.unsplash.com/photo-1606756790138-261d2b21cd75",
+      "image": "/images/dataImages/pexels-sergio-arreola-208344354-24182618.jpg",
       "rating": 4.8
     },
     {
@@ -45,7 +45,7 @@
       "description": "Marinated chicken grilled to perfection, served with fresh salad and garlic sauce.",
       "price": 12.99,
       "isPopular": true,
-      "image": "https://images.unsplash.com/photo-1625943553852-781c6dd46faa",
+      "image": "/images/dataImages/pexels-omar-b-shokerat-3263898-18177330(1).jpg",
       "rating": 4.8
     },
     {
@@ -55,7 +55,7 @@
       "description": "Juicy beef steak cooked to your preference with seasonal vegetables.",
       "price": 18.99,
       "isPopular": true,
-      "image": "https://images.unsplash.com/photo-1600891964092-4316c288032e"
+      "image": "/images/dataImages/pexels-tiago-morheto-1937330012-29095926.jpg"
     },
     {
       "id": "6",
@@ -64,7 +64,7 @@
       "description": "Fresh fish simmered in a rich and flavorful curry sauce.",
       "price": 14.99,
       "isPopular": false,
-      "image": "https://images.unsplash.com/photo-1625944230945-d3f4a1c5b56c",
+      "image": "/images/dataImages/pexels-athul-santhosh-1483733062-35532834.jpg",
       "rating": 4.8
     },
     {
@@ -74,7 +74,7 @@
       "description": "Grilled beef patty with lettuce, tomato, cheese, and house sauce.",
       "price": 9.99,
       "isPopular": true,
-      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349",
+      "image": "/images/dataImages/pexels-ramon-rangel-661975902-34407494.jpg",
       "rating": 4.8
     },
     {
@@ -84,7 +84,7 @@
       "description": "Crispy chicken fillet with fresh lettuce and creamy mayo.",
       "price": 8.99,
       "isPopular": false,
-      "image": "https://images.unsplash.com/photo-1606755962773-d324e0a13086",
+      "image": "/images/dataImages/pexels-gonzalo-acuna-166058093-10922925.jpg",
       "rating": 4.8
     },
     {
@@ -94,7 +94,7 @@
       "description": "Plant-based patty with grilled vegetables and vegan sauce.",
       "price": 8.49,
       "isPopular": false,
-      "image": "https://images.unsplash.com/photo-1550317138-10000687a72b",
+      "image": "/images/dataImages/pexels-k-patel-1100389468-20722067.jpg",
       "rating": 4.1
     },
     {
@@ -104,7 +104,7 @@
       "description": "Classic pizza with tomato sauce, mozzarella, and fresh basil.",
       "price": 11.99,
       "isPopular": true,
-      "image": "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca",
+      "image": "/images/dataImages/pexels-snappr-29839587.jpg",
       "rating": 4.8
     },
     {
@@ -114,7 +114,7 @@
       "description": "Loaded with pepperoni slices and melted cheese.",
       "price": 13.99,
       "isPopular": true,
-      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e",
+      "image": "/images/dataImages/pexels-criss-30849268.jpg",
       "rating": 4.8
     },
     {
@@ -124,7 +124,7 @@
       "description": "Grilled chicken, BBQ sauce, onions, and mozzarella.",
       "price": 14.49,
       "isPopular": false,
-      "image": "https://images.unsplash.com/photo-1594007654729-407eedc4be1f",
+      "image": "/images/dataImages/pexels-willians-huerta-2157111846-35819051.jpg",
       "rating": 4.8
     },
     {
@@ -134,7 +134,7 @@
       "description": "Chilled classic Coca-Cola.",
       "price": 1.99,
       "isPopular": true,
-      "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97",
+      "image": "/images/dataImages/pexels-snappr-29851093.jpg",
       "rating": 4.8
     },
     {
@@ -144,7 +144,7 @@
       "description": "Freshly squeezed oranges served cold.",
       "price": 3.49,
       "isPopular": false,
-      "image": "https://images.unsplash.com/photo-1571689936045-3a3b6e0f1a3c",
+      "image": "/images/dataImages/pexels-pixabay-158053.jpg",
       "rating": 4.8
     },
     {
@@ -154,7 +154,7 @@
       "description": "Cold brewed coffee with milk and ice.",
       "price": 3.99,
       "isPopular": false,
-      "image": "https://images.unsplash.com/photo-1590080877777-9e97c5cfcaa7",
+      "image": "/images/dataImages/pexels-roman-odintsov-4869293.jpg",
       "rating": 4.8
     },
     {
@@ -164,7 +164,7 @@
       "description": "Rich and moist chocolate cake topped with ganache.",
       "price": 5.99,
       "isPopular": true,
-      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c",
+      "image": "/images/dataImages/pexels-dhayaeddart-5276663.jpg",
       "rating": 4.8
     },
     {
@@ -174,7 +174,7 @@
       "description": "Creamy cheesecake with a buttery biscuit base.",
       "price": 6.49,
       "isPopular": false,
-      "image": "https://images.unsplash.com/photo-1567171466295-4afa63d45416",
+      "image": "/images/dataImages/pexels-angela-khebou-259135285-13922384.jpg",
       "rating": 4.7
     },
     {
@@ -184,7 +184,7 @@
       "description": "Vanilla ice cream topped with chocolate sauce and nuts.",
       "price": 4.99,
       "isPopular": false,
-      "image": "https://images.unsplash.com/photo-1505253216365-5f37a7b4d6c5",
+      "image": "/images/dataImages/pexels-pramodtiwari-14841924.jpg",
       "rating": 3.8
     }
   ]

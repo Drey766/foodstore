@@ -32,12 +32,18 @@
   justify-content: center;
   transition: var(--transition);
   color: var(--text-light);
+  cursor: pointer;
 }
 
-.navBtn:hover {
+.navBtn:hover:not(.disabled) {
   border-color: var(--primary-color);
   color: var(--primary-color);
   transform: scale(1.05);
+}
+
+.navBtn.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .navBtnActive {
@@ -46,13 +52,24 @@
   color: var(--white);
 }
 
-.navBtnActive:hover {
+.navBtnActive:hover:not(.disabled) {
   background: var(--primary-hover);
 }
 
-.dishesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+.navBtnActive.disabled {
+  background: var(--border-color);
+  border-color: var(--border-color);
+  opacity: 0.5;
+}
+
+/* Carousel Wrapper */
+.carouselWrapper {
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.carouselTrack {
+  display: flex;
   gap: 32px;
 }
 
@@ -62,11 +79,12 @@
   padding: 24px;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
-  animation: fadeInUp 0.6s ease-out backwards;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .dishCard:hover {
@@ -75,7 +93,7 @@
 }
 
 .dishImage {
-  width: 140px;
+  width: 240px;
   height: 140px;
   border-radius: 50%;
   background: linear-gradient(135deg, #FFF5E6 0%, #FFFFFF 100%);
@@ -106,6 +124,7 @@
   color: var(--text-light);
   margin-bottom: 12px;
   line-height: 1.5;
+  min-height: 42px;
 }
 
 .rating {
@@ -142,6 +161,7 @@
   font-weight: 600;
   font-size: 0.9rem;
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .addBtn:hover {
@@ -150,14 +170,39 @@
   box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+/* Carousel Indicators */
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border-color);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+}
+
+.indicator:hover {
+  background: var(--text-light);
+  transform: scale(1.2);
+}
+
+.activeIndicator {
+  background: var(--primary-color);
+  width: 30px;
+  border-radius: 5px;
+}
+
+@media (max-width: 1024px) {
+  .carouselTrack {
+    gap: 24px;
   }
 }
 
@@ -172,9 +217,21 @@
     font-size: 2rem;
   }
 
-  .dishesGrid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px;
+  .carouselTrack {
+    gap: 20px;
+  }
+
+  .dishCard {
+    padding: 20px;
+  }
+
+  .dishImage {
+    width: 120px;
+    height: 120px;
+  }
+
+  .dishEmoji {
+    font-size: 4.5rem;
   }
 }
 
@@ -187,11 +244,33 @@
     font-size: 1.75rem;
   }
 
-  .dishesGrid {
-    grid-template-columns: 1fr;
+  .carouselTrack {
+    gap: 16px;
   }
 
   .dishCard {
-    padding: 20px;
+    padding: 20px 16px;
+  }
+
+  .dishImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .dishEmoji {
+    font-size: 4rem;
+  }
+
+  .dishName {
+    font-size: 1.3rem;
+  }
+
+  .price {
+    font-size: 1.3rem;
+  }
+
+  .addBtn {
+    font-size: 0.85rem;
+    padding: 8px 16px;
   }
 }

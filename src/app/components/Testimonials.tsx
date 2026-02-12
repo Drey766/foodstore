@@ -8,7 +8,7 @@ const testimonials: Testimonial[] = [
   {
     id: 1,
     name: 'Savannah Nguyen',
-    review: '"This place is great! Atmosphere is chill and cool but the staff is also really friendly. They know what they\'re doing and what they\'re talking about, and you can tell making the customers happy is their main priority."',
+    review: '"The food was absolutely delicious and beautifully presented. The atmosphere was warm and welcoming — definitely one of my favorite spots in town."',
     rating: 5,
     avatar: '👤',
   },

@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../styles/DishCard.module.css'
 import { useCart } from '../context/CartContext'
 import { MenuItem } from '../types'
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 
 export interface DishCardProps {
@@ -12,7 +12,7 @@ export interface DishCardProps {
   category?: string;
   price: number;
   rating: number;
-  image: string;
+  image: StaticImageData;
   food: MenuItem
 }
 
@@ -29,7 +29,7 @@ export default function DishCard({description,image,name,rating,price,food,id}: 
               className={styles.dishCard}
             >
               <div className={styles.dishImage}>
-                <img src={image} alt={image}  className={styles.dishEmoji} />
+                <Image src={image} alt={name}  className={styles.dishEmoji} width={400} height={300} />
               </div>
               <h3 className={styles.dishName}>{name}</h3>
               <p className={styles.dishDescription}>{description}</p>
