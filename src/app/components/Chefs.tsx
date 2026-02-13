@@ -3,14 +3,14 @@
 import React from 'react';
 import { Chef } from '../types';
 import styles from '../styles/Chefs.module.css';
-import chef1 from '@/../public/images/pexels-miquel-ferran-gomez-figueroa-2172703-3814446.jpg'
-import chef2 from '@/../public/images/rc-cf-FMh5o5m5N9E-unsplash.jpg'
-import chef3 from '@/../public/images/louis-hansel-v3OlBE6-fhU-unsplash.jpg'
-import chef4 from '@/../public/images/febrian-zakaria-SiQgni-cqFg-unsplash.jpg'
+import chef1 from '@/../public/images/chefs/pexels-kampus-6605421.jpg'
+import chef2 from '@/../public/images/chefs/pexels-kampus-8629075.jpg'
+import chef3 from '@/../public/images/chefs/pexels-kampus-8629122.jpg'
+import chef4 from '@/../public/images/chefs/pexels-mauryaaship-20206758.jpg'
 import Image from 'next/image';
 
 const chefs: Chef[] = [
-  { id: 1, name: 'Savannah Nguyen', role: 'Head Chef', image: chef1 },
+  { id: 1, name: 'Brian Ortega', role: 'Head Chef', image: chef1 },
   { id: 2, name: 'Esther Howard', role: 'Sous Chef', image: chef2 },
   { id: 3, name: 'Ravien Ridtaway', role: 'Pastry Chef', image: chef3 },
   { id: 4, name: 'Albert Flores', role: 'Executive Chef', image: chef4 },

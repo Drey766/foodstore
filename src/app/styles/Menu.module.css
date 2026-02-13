@@ -68,8 +68,8 @@
 }
 
 .menuImage {
-  width: 130px;
-  height: 130px;
+  width: 100%;
+  height: 150px;
   border-radius: 50%;
   background: linear-gradient(135deg, #FFF5E6 0%, #FFFFFF 100%);
   display: flex;
@@ -84,7 +84,9 @@
 }
 
 .menuEmoji {
-  font-size: 4.5rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }
 
 .menuName {

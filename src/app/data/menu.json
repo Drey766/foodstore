@@ -1,0 +1,16 @@
+{
+    "menu" : [
+  { "id": 5, "name": "Pasta", "category": "Main Item", "price": 35.00, "rating": 5.0, "image": "/images/menuImages/pexels-didsss-33312313.jpg" },
+  { "id": 6, "name": "French Fries", "category": "Main Item", "price": 65.00, "rating": 4.8, "image": "/images/menuImages/pexels-barfisch-pix-115740(1).jpg" },
+  { "id": 7, "name": "Chicken Shawarma", "category": "Main Item", "price": 95.00, "rating": 4.9, "image": "/images/menuImages/pexels-said-mpinga-3917777-5840330.jpg" },
+  { "id": 8, "name": "Fish Curry", "category": "Main Item", "price": 95.00, "rating": 5.0, "image": "/images/menuImages/pexels-athul-santhosh-1483733062-35532834.jpg" },
+  { "id": 9, "name": "Breakfast Bowl", "category": "Breakfast", "price": 45.00, "rating": 4.7, "image": "/images/menuImages/pexels-meli-di-rocco-303801-879202.jpg" },
+  { "id": 10, "name": "Pancakes", "category": "Breakfast", "price": 55.00, "rating": 4.9, "image": "/images/menuImages/pexels-clickerhappy-9415.jpg" },
+  { "id": 11, "name": "Caesar Salad", "category": "Salad", "price": 75.00, "rating": 4.8, "image": "/images/menuImages/pexels-solliefoto-299352.jpg" },
+  { "id": 12, "name": "Chocolate Cake", "category": "Dessert", "price": 85.00, "rating": 5.0, "image": "/images/menuImages/pexels-dhayaeddart-5276663.jpg" },
+  { "id": 13, "name": "Sushi Roll", "category": "Japanese", "price": 120.00, "rating": 5.0, "image": "/images/menuImages/pexels-vitaliy-haiduk-326720599-17308523.jpg" },
+  { "id": 14, "name": "Ramen", "category": "Japanese", "price": 110.00, "rating": 4.9, "image": "/images/menuImages/pexels-patricio-ledeill-2922591-5602477.jpg" },
+  { "id": 15, "name": "Fresh Juice", "category": "Drinks", "price": 40.00, "rating": 4.6, "image": "/images/menuImages/pexels-jdgromov-18142606.jpg" },
+  { "id": 16, "name": "Iced Coffee", "category": "Drinks", "price": 50.00, "rating": 4.8, "image": "/images/menuImages/pexels-roman-odintsov-4869293.jpg" }
+]
+}

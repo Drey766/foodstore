@@ -3,6 +3,7 @@
 import React from 'react';
 import { Service } from '../types';
 import styles from '../styles/ServiceSection.module.css';
+import Link from 'next/link';
 
 const services: Service[] = [
   { icon: '🕐', title: '24/7 Service', description: 'Available anytime' },
@@ -55,7 +56,7 @@ const ServiceSection: React.FC = () => {
               ))}
             </div>
 
-            <button className={styles.aboutBtn}>About Us</button>
+            <Link href={'/about'} className={styles.aboutBtn}>About Us</Link>
           </div>
         </div>
       </div>

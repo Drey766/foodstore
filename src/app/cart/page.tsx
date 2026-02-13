@@ -6,6 +6,7 @@ import { useCart } from '../context/CartContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from '../styles/Cart.module.css';
+import Image from 'next/image';
 
 const CartPage: React.FC = () => {
   const { cart, totalItems, addToCart, removeFromCart, updateQuantity, clearCart, getTotal } = useCart();
@@ -69,7 +70,7 @@ const CartPage: React.FC = () => {
                       style={{animationDelay: `${index * 0.1}s`}}
                     >
                       <div className={styles.itemImage}>
-                        <span className={styles.itemEmoji}>{item.image}</span>
+                        <Image className={styles.itemEmoji} src={item.image} alt={item.name} height={100} width={200}/>
                       </div>
                       
                       <div className={styles.itemDetails}>

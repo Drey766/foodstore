@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import styles from '../styles/DishCard.module.css'
 import { useCart } from '../context/CartContext'
 import { MenuItem } from '../types'
@@ -12,16 +12,23 @@ export interface DishCardProps {
   category?: string;
   price: number;
   rating: number;
-  image: StaticImageData;
+  image: string;
   food: MenuItem
 }
 
 
 export default function DishCard({description,image,name,rating,price,food,id}: DishCardProps) {
-    const { addToCart } = useCart();
+    const { cart, addToCart } = useCart();
     const handleAddToCart = (dish: MenuItem): void => {
         addToCart(dish);
       };
+
+    const [isAdded, setIsAdded] = useState(false);
+    const isInBasket = cart.some(item => item.id === id);
+
+    useEffect(() => {
+    setIsAdded(isInBasket);
+  }, [isInBasket]);
     
   return (
     <div>
@@ -46,7 +53,7 @@ export default function DishCard({description,image,name,rating,price,food,id}: 
                   className={styles.addBtn}
                   onClick={() => handleAddToCart(food)}
                 >
-                  Add to Cart
+                  {isAdded ? 'Added' : 'Add to Cart'}
                 </button>
               </div>
             </div>

@@ -4,6 +4,7 @@ import React from 'react';
 import styles from '../styles/Hero.module.css';
 import Image from 'next/image';
 import img1 from '@/../public/images/pexels-filipe-coelho-32247889-13640503_1_-removebg-preview.png'
+import Link from 'next/link';
 
 const Hero: React.FC = () => {
   return (
@@ -19,14 +20,14 @@ const Hero: React.FC = () => {
               Enjoy freshly prepared dishes made with quality ingredients and bold flavors. From comforting classics to chef-inspired specialties, every bite is crafted with care.
             </p>
             <div className={styles.heroButtons}>
-              <button className={styles.primaryBtn}>Reserve Now</button>
-              <button className={styles.secondaryBtn}>
+              <Link href={'/reservation'} className={styles.primaryBtn}>Reserve Now</Link>
+              <Link href={'/menu'} className={styles.secondaryBtn}>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="10" cy="10" r="9" stroke="currentColor" strokeWidth="2"/>
                   <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM19 19l-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                 </svg>
                 Search
-              </button>
+              </Link>
             </div>
           </div>
 

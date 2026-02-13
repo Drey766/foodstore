@@ -18,10 +18,10 @@ const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.headerContainer}>
         <div className={styles.headerContent}>
-          <div className={styles.logo}>
+          <Link href='/' className={styles.logo}>
             <span className={styles.logoIcon}>🍴</span>
             <span className={styles.logoText}>Bites</span>
-          </div>
+          </Link>
 
           <div className={styles.navContainer}>
             <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.navOpen : ''}`}>

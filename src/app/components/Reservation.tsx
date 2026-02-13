@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styles from '../styles/Reservation.module.css';
+import Link from 'next/link';
 
 const Reservation: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const Reservation: React.FC = () => {
             <p className={styles.description}>
               Skip the wait and enjoy a seamless dining experience. Reserve your table online in just a few clicks.
             </p>
-            <button className={styles.reserveBtn}>Reserve Now</button>
+            <Link href={'/reservation'} className={styles.reserveBtn}>Reserve Now</Link>
           </div>
 
           <div className={styles.right}>

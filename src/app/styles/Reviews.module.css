@@ -5,7 +5,10 @@
 
 /* Hero Section */
 .heroSection {
-  background: linear-gradient(135deg, #FFF9F0 0%, #FFE8CC 100%);
+  background-image: url('../../../public//images/background/pexels-ann-h-45017-32342297.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   padding: 100px 0 60px;
   text-align: center;
 }
@@ -13,14 +16,14 @@
 .heroTitle {
   font-size: 4rem;
   font-weight: 800;
-  color: var(--text-dark);
+  color: var(--bg-white);
   margin-bottom: 16px;
   animation: fadeInDown 0.8s ease-out;
 }
 
 .heroSubtitle {
   font-size: 1.3rem;
-  color: var(--text-light);
+  color: var(--bg-white);
   max-width: 700px;
   margin: 0 auto;
   animation: fadeInUp 0.8s ease-out;
